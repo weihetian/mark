@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+   <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+
+  <script src='https://cdn.jsdelivr.net/jquery.typeit/3.0.1/typeit.min.js'></script>
+  <script src='js/three.js'></script>
+  <script src="https://cdn.rawgit.com/mrdoob/three.js/master/examples/js/controls/OrbitControls.js"></script>
+
+
+  <link rel="stylesheet" href='css/_main.css'>
+</head>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-74339348-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<body>
+
+<div class='menu'>
+  <ul class='menu_list'>
+    <li><a href='javascript:void(0)' class='menu_hello_btn menu_btn' onclick='change_url("hello")'>Hello</a></li>
+    <li><a href='javascript:void(0)' class='menu_work_btn menu_btn' onclick='change_url("work")' >Work & Expereince</a></li>
+    <li><a href='javascript:void(0)' class='menu_skill_btn menu_btn' onclick='change_url("skills")'>Skills</a></li>
+  </ul>
+</div>
+
+<div class='main'>
+
+  <div class='matrix' id='matrix-container'>
+
+  </div>
+  <div class='nose'>
+
+  </div>
+
+  <div class='slide_area'>
+
+    <div class='slide' id='slide-1'>
+      <div class='content'>
+        <div class='header'>
+          <h1>Hello!</h1>
+
+        </div>
+
+        <div class='body'>
+          <div class='ai'>
+            <p>My name is Weihe Tian</p>
+            <p>I love building interactive and beautiful applications.</br>
+              Because the world always needs more of those.
+            </p>
+
+            <p>
+          </div>
+          <div class='start'>
+            <a href='#work'> Let me tell you more about myself!  <i class="start_arrow fa fa-arrow-right"></i></a>
+          </div>
+          <div class='social_media'>
+            <h3>Contact Me</h3>
+            <p><i class="fa fa-envelope"></i> scott.tian.tra@gmail.com<br>
+            <a target="_blank" href='https://www.linkedin.com/in/weihe-tian-91727293'><i class="fa fa-linkedin-square"></i> https://www.linkedin.com/in/weihe-tian-91727293<a><br>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class='slide' id='slide-2'>
+      <div class='content'>
+        <div class='header'>
+          <h1>Work & Experience</h1>
+          <p>A list of my pervious work, <i class="fa fa-hand-pointer-o"></i> click projet to see details</p>
+        </div>
+      <div class='body'>
+        <ul class='project_list'>
+          <li>
+            <div class='line'>
+
+            </div>
+            <div class='project_list_content' >
+
+              <h3>Carvertise - CTO</h3>
+              <p>Carvertise is adversting media start up that use every day car driver to deliever the brands message
+              </p>
+              <p>It is a: Start up, Advertising, Technology</p>
+                <ul class='project_sublist'>
+                  <li>
+                    <div class='project_sublist_subproject ' onclick="change_url('carvertise_web')">
+                      <h4>Website (Front End)</h4>
+                      <p>Carvertise website</p>
+                      <p>Key words: Front End design, Mobile, HTML, CSS, Responsive Web</p>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div class='project_sublist_subproject' onclick="change_url('carvertise_analytics')">
+                      <h4>Analytics Platfrom</h4>
+                      <p>Analytics Platfrom is used to track drivers and provide advertisers with campaign statics</p>
+                      <p>Key words: GEO location, Mapping, Big Data, AngularJs, APIs, PHP, Mysql</p>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div class='project_sublist_subproject' onclick="change_url('carvertise_backend')">
+                      <h4>Backend System</h4>
+                      <p>Carvertise's Backend System that is used to manage the website and data</p>
+                      <p>Key words: Database, Angularjs,HTML, CSS, Mysql</p>
+                    </div>
+                  </li>
+
+                </ul>
+
+            </div>
+          </li>
+
+          <li>
+            <div class='line'>
+
+            </div>
+            <div class='project_list_content' >
+              <h3>STAK Studios - Co Founder</h3>
+              <p>STAK studios was an studios that focuses on building IOS apps
+              </p>
+              <p>Key word:Start up, IOS, technology</p>
+              <ul class='project_sublist'>
+                <li>
+                  <div class='project_sublist_subproject' onclick="change_url('stak_zapified')">
+                    <h4>Zapified</h4>
+                    <p>Zapified is an online market place for college student to buy and sell anything</p>
+                    <p>Key words: IOS, App, Xcode, APIs</p>
+                  </div>
+                </li>
+
+                <li>
+                  <div class='project_sublist_subproject' onclick="change_url('stak_doodle')">
+                    <h4>Doodle Adventurer</h4>
+                    <p>Doodle Adventurer is an ios game</p>
+                    <p>Key words: IOS, App, Xcode, Photoshop</p>
+                  </div>
+                </li>
+
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    </div>
+
+    <div class='slide' id='slide-3'>
+      <div class='content'>
+        <div class='header'>
+          <h1>Skills</h1>
+
+        </div>
+
+        <div class='body'>
+          <div class='skill_block'>
+            <h3>Web</h3>
+          <p>I love Web development<br>
+            I have more than 3 years of web development expierience and I am active with front-end languages
+           <span class='skill'>HTML5</span>,
+           <span class='skill'>CSS3</span>,
+           <span class='skill'>Javascript</span>,
+           <span class='skill'>AngularJs</span>
+           and back end languages
+           <span class='skill'>PHP</span>,
+           <span class='skill'>Mysql</span>.
+         </p>
+        </div>
+        <div class='skill_block'>
+          <h3>Mobile</h3>
+         <p>I had experience on mobile experience using languages
+          <span class='skill'>Object C</span> and
+          <span class='skill'>PhoneGap</span>
+         </p>
+         </div>
+
+         <div class='skill_block'>
+           <h3>Software Development</h3>
+          <p>I also learnt and worked on projects using OO langues such as
+           <span class='skill'>Java</span>,
+           <span class='skill'>C++</span> and
+           <span class='skill'>C</span>
+          </p>
+          </div>
+
+        <div class='skill_block'>
+            <h3>Other</h3>
+           <p>Besides programming skills, I also have experience on
+            <span class='skill'>Front end design</span>,
+            <span class='skill'>UI/UX design</span>,
+            <span class='skill'>Github</span>,
+            <span class='skill'>AWS</span>,
+            <span class='skill'>Photoshop</span>,
+           </p>
+          </div>
+
+          <div class="ct-chart ct-golden-section" id="chart1"></div>
+
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <!-- Project area -->
+  <div class='project_area'>
+    <div class='move_back_btn' onclick='backtomain()'>
+      <i class="fa fa-arrow-up"></i>
+    </div>
+    <div class='project_area_body'>
+
+
+    </div>
+
+
+  </div>
+  <!-- project area end -->
+
+
+</div>
+
+<script src='js/jquery.transit.min.js'></script>
+  <script src="js/matrix.js"></script>
+  <script src="js/_main.js"></script>
+</body>
+</html>
